@@ -1,0 +1,17 @@
+package components
+
+templ CenteredActionCard() {
+	<div
+ 		id="centered-action-card"
+ 		class="fixed top-0 w-[100vw] h-[100vh] bg-[#90909080] text-center flex items-center justify-center"
+ 		hx-get="/"
+ 		hx-trigger="keyup[key=='Escape'] from:body"
+ 		hx-swap="delete"
+	>
+		<div class="pr-12 py-8 shrink-0 w-1/2 mx-auto">
+			<div class="bg-white rounded-3xl p-8 shrink-0">
+				{ children... }
+			</div>
+		</div>
+	</div>
+}

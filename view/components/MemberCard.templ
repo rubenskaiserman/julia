@@ -1,0 +1,32 @@
+package components
+
+templ MemberCard(firstName string, lastName string, email string, age string, experimentID string) {
+	@CenteredActionCard() {
+		<div class="rounded px-8 pt-6 pb-8 mb-4 w-full mx-auto">
+			<div class="w-full flex text-right align-right justify-end">
+				<button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-3" type="button">
+					Edit
+				</button>
+				<button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+					Delete
+				</button>
+			</div>
+			<div class="mb-4 mb-8">
+				<p class="text-gray-700 font-bold">Name:</p>
+				<p class="text-gray-900">{ firstName } { lastName }</p>
+			</div>
+			<div class="mb-4">
+				<p class="text-gray-700 font-bold">Email:</p>
+				<p class="text-gray-900">{ email }</p>
+			</div>
+			<div class="mb-4">
+				<p class="text-gray-700 font-bold">Age:</p>
+				<p class="text-gray-900">{ age }</p>
+			</div>
+			<div class="mb-4">
+				<p class="text-gray-700 font-bold">Experiment ID:</p>
+				<p class="text-gray-900">{ experimentID }</p>
+			</div>
+		</div>
+	}
+}

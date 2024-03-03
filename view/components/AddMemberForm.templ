@@ -1,0 +1,79 @@
+package components
+
+templ AddMemberForm() {
+	@CenteredActionCard() {
+		<form class="w-full max-w-lg m-auto">
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm font-bold mb-2" for="firstName">
+					First Name
+				</label>
+				<input
+ 					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+ 					id="firstName"
+ 					name="firstName"
+ 					type="text"
+ 					placeholder="First Name"
+				/>
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+					Last Name
+				</label>
+				<input
+ 					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+ 					id="lastName"
+ 					name="lastName"
+ 					type="text"
+ 					placeholder="Last Name"
+				/>
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+					Email
+				</label>
+				<input
+ 					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+ 					id="email"
+ 					name="email"
+ 					type="email"
+ 					placeholder="Email"
+				/>
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm font-bold mb-2" for="age">
+					Age
+				</label>
+				<input
+ 					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+ 					id="age"
+ 					name="age"
+ 					type="number"
+ 					placeholder="Age"
+				/>
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm font-bold mb-2" for="age">
+					Experiment ID
+				</label>
+				<input
+ 					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+ 					id="experimentID"
+ 					name="experimentID"
+ 					type="experimentID"
+ 					placeholder="Experiment ID"
+				/>
+			</div>
+			<div class="mb-4">
+				<button
+ 					class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+ 					type="button"
+ 					hx-post="/api/create-member"
+ 					hx-swap="delete"
+ 					hx-target="#centered-action-card"
+				>
+					Submit
+				</button>
+			</div>
+		</form>
+	}
+}
